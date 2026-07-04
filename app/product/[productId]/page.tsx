@@ -4,6 +4,8 @@ import { useState, use } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "../../data/db";
+import { submitOrderToTelegram } from "../../actions";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function ProductDetailPage({
   params,
@@ -30,13 +32,22 @@ export default function ProductDetailPage({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const submitOrder = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!turnstileToken) {
+      alert("দয়া করে ক্যাপচা পূরণ করুন।");
+      return;
+    }
     setIsSubmitting(true);
     try {
-      await new Promise((r) => setTimeout(r, 1000));
-      setFormSuccess(true);
+      const result = await submitOrderToTelegram({ ...formState, turnstileToken });
+      if (result.success) {
+        setFormSuccess(true);
+      } else {
+        alert("দুঃখিত, কোনো সমস্যা হয়েছে: " + result.error);
+      }
     } catch (error) {
       alert("দুঃখিত, কোনো সমস্যা হয়েছে।");
     } finally {
@@ -55,7 +66,7 @@ export default function ProductDetailPage({
           <img className="product-hero-img" src={product.image} alt={product.name} />
           <div className="product-hero-overlay"></div>
           <Link href="/" className="back-btn">← পণ্য তালিকায় ফিরুন</Link>
-          <div className="product-hero-content" style={{ maxWidth: '1100px', left: '50%', transform: 'translateX(-50%)', padding: '2.5rem 2rem' }}>
+          <div className="product-hero-content">
             <span className="product-emoji">{product.emoji}</span>
             <h1>{product.name}</h1>
             <p className="tagline">{product.tagline}</p>
@@ -216,7 +227,13 @@ export default function ProductDetailPage({
                     <label htmlFor="f-note">মন্তব্য</label>
                     <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => setFormState({...formState, note: e.target.value})}></textarea>
                   </div>
-                  <button type="submit" id="submit-btn" disabled={isSubmitting}>
+                  <div className="form-group" style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
+                    <Turnstile 
+                      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""} 
+                      onSuccess={(token) => setTurnstileToken(token)}
+                    />
+                  </div>
+                  <button type="submit" id="submit-btn" disabled={isSubmitting || !turnstileToken}>
                     {isSubmitting ? "পাঠানো হচ্ছে..." : "অনুরোধ পাঠান"}
                   </button>
                 </form>

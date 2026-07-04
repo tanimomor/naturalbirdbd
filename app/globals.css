@@ -375,7 +375,10 @@
 
         .product-hero {
             position: relative;
-            height: 480px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             overflow: hidden;
             background: linear-gradient(160deg, var(--green-dark), var(--green-mid));
         }
@@ -387,20 +390,21 @@
             opacity: 0.55;
             position: absolute;
             inset: 0;
+            z-index: 0;
         }
 
         .product-hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to top, rgba(27, 67, 50, 0.9) 0%, rgba(27, 67, 50, 0.3) 60%, transparent 100%);
+            z-index: 1;
         }
 
         .product-hero-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2.5rem 1.5rem;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 4rem 1.5rem 2.5rem;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -445,6 +449,7 @@
             padding: 0.4rem 0.9rem;
             border-radius: 50px;
             transition: background 0.2s;
+            z-index: 10;
         }
 
         .back-btn:hover {
@@ -1048,7 +1053,7 @@
         /* RESPONSIVE */
         @media(max-width:768px) {
             .product-hero {
-                height: 360px
+                min-height: 360px
             }
 
             .products-grid {
@@ -1096,7 +1101,7 @@
             }
 
             .product-hero {
-                height: 300px
+                min-height: 320px
             }
         }
     
