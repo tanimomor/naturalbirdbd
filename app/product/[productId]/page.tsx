@@ -72,7 +72,7 @@ export default function ProductDetailPage({
             <h1>{product.name}</h1>
             <p className="tagline">{product.tagline}</p>
             <div className="hero-cta-row">
-              <button className="btn-primary btn-gold" onClick={scrollToOrder}>অর্ডারের অনুরোধ করুন →</button>
+              <button className="btn-primary btn-gold" onClick={scrollToOrder}>অর্ডার করুন →</button>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function ProductDetailPage({
 
           <div className="content-section" id="order-section">
             <div className="order-section">
-              <h2>অর্ডারের অনুরোধ করুন</h2>
+              <h2>অর্ডার অনুরোধ করুন</h2>
               <p>নিচের ফর্মটি পূরণ করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
 
               {!formSuccess ? (
@@ -237,13 +237,13 @@ export default function ProductDetailPage({
                     </div>
                   )}
                   <button type="submit" id="submit-btn" disabled={isSubmitting || (isTurnstileEnabled && !turnstileToken)}>
-                    {isSubmitting ? "পাঠানো হচ্ছে..." : "অনুরোধ পাঠান"}
+                    {isSubmitting ? "পাঠানো হচ্ছে..." : "আমার তথ্য সঠিক"}
                   </button>
                 </form>
               ) : (
                 <div id="form-success" style={{ display: 'block' }}>
                   <div className="success-icon">✅</div>
-                  <p><strong>ধন্যবাদ!</strong><br />আপনার অনুরোধটি সফলভাবে গ্রহণ করা হয়েছে。<br />খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
+                  <p><strong>ধন্যবাদ!</strong><br />আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে。<br />খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
                 </div>
               )}
             </div>

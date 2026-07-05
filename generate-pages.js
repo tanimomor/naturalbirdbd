@@ -203,7 +203,7 @@ export default function Page() {
             <h1>${productData.name}</h1>
             <p className="tagline">${productData.tagline}</p>
             <div className="hero-cta-row">
-              <button className="btn-primary btn-gold" onClick={scrollToOrder}>অর্ডারের অনুরোধ করুন →</button>
+              <button className="btn-primary btn-gold" onClick={scrollToOrder}>অর্ডার করুন →</button>
             </div>
           </div>
         </div>
@@ -314,7 +314,7 @@ export default function Page() {
 
           <div className="content-section" id="order-section">
             <div className="order-section">
-              <h2>অর্ডারের অনুরোধ করুন</h2>
+              <h2>অর্ডার করুন</h2>
               <p>নিচের ফর্মটি পূরণ করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
               
               {!formSuccess ? (
@@ -353,13 +353,13 @@ export default function Page() {
                     <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => setFormState({...formState, note: e.target.value})}></textarea>
                   </div>
                   <button type="submit" id="submit-btn" disabled={isSubmitting}>
-                    {isSubmitting ? "পাঠানো হচ্ছে..." : "অনুরোধ পাঠান"}
+                    {isSubmitting ? "পাঠানো হচ্ছে..." : "অর্ডার পাঠান"}
                   </button>
                 </form>
               ) : (
                 <div id="form-success" style={{ display: 'block' }}>
                   <div className="success-icon">✅</div>
-                  <p><strong>ধন্যবাদ!</strong><br/>আপনার অনুরোধটি সফলভাবে গ্রহণ করা হয়েছে。<br/>খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
+                  <p><strong>ধন্যবাদ!</strong><br/>আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে。<br/>খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
                 </div>
               )}
             </div>
