@@ -56,7 +56,7 @@ export default function RootLayout({
           {children}
         </div>
 
-        <a id="wa-btn" href="https://wa.me/01716165878" target="_blank" rel="noopener noreferrer" title="WhatsApp এ যোগাযোগ করুন">💬</a>
+        <a id="wa-btn" href="https://wa.me/8801716165878" target="_blank" rel="noopener noreferrer" title="WhatsApp এ যোগাযোগ করুন">💬</a>
 
         <footer id="site-footer">
           <div className="footer-logo">🐦 Natural Birds BD</div>

@@ -1,6 +1,7 @@
 import { db } from "./data/db";
 import Link from "next/link";
 import { OrderForm } from "./components/OrderForm";
+import { ResponsiveMarginWrapper } from "./components/ResponsiveMarginWrapper";
 
 export default function Home() {
   return (
@@ -67,9 +68,9 @@ export default function Home() {
       </section>
 
       <section id="order-section" className="content-section" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <ResponsiveMarginWrapper>
           <OrderForm defaultProduct={Object.values(db)[0]?.name || ""} />
-        </div>
+        </ResponsiveMarginWrapper>
       </section>
     </div>
   );

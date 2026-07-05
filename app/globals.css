@@ -760,6 +760,19 @@
             margin: 1.25rem 0 2rem;
         }
 
+        #order-section {
+            scroll-margin-top: 120px;
+        }
+
+        .home-order-section {
+            margin: 3.8rem 0 3.2rem;
+        }
+
+        .home-order-section .order-section {
+            margin-top: 1.8rem;
+            margin-bottom: 1.8rem;
+        }
+
         .order-section h2 {
             color: var(--white);
             margin-bottom: 0.35rem;
