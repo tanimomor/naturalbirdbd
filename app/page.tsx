@@ -6,7 +6,7 @@ export default function Home() {
     <div id="home-page" className="page-enter">
       <section className="home-hero">
         <div className="home-hero-content">
-          <h1>খাঁটি অর্গানিক পোল্ট্রি<br/>স্বাস্থ্যকর জীবনের জন্য</h1>
+          <h1>খাঁটি অর্গানিক পোল্ট্রি<br />স্বাস্থ্যকর জীবনের জন্য</h1>
           <p>১০০% অর্গানিক খাদ্যে লালিত টার্কি, চীনা হাঁস, কোয়েল ও তিতির — কোনো বাণিজ্যিক খাদ্য নেই, কোনো অ্যান্টিবায়োটিক নেই</p>
           <div className="hero-badges">
             <span className="badge">🌿 ১০০% অর্গানিক</span>
@@ -44,23 +44,23 @@ export default function Home() {
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '1.5rem', textAlign: 'center' }}>
           <div>
             <div style={{ fontSize: '2.2rem', marginBottom: '0.5rem' }}>🌱</div>
-            <h3 style={{ fontSize: '1rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>১০০% অর্গানিক</h3>
-            <p style={{ fontSize: '0.83rem', color: 'var(--text-muted)' }}>মাঠ থেকে সংগৃহীত খাদ্য, নিজস্বভাবে প্রক্রিয়াজাত</p>
+            <h3 style={{ fontSize: '1.15rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>১০০% অর্গানিক</h3>
+            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>মাঠ থেকে সংগৃহীত খাদ্য, নিজস্বভাবে প্রক্রিয়াজাত</p>
           </div>
           <div>
             <div style={{ fontSize: '2.2rem', marginBottom: '0.5rem' }}>🏥</div>
-            <h3 style={{ fontSize: '1rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>স্বাস্থ্য উপকারী</h3>
-            <p style={{ fontSize: '0.83rem', color: 'var(--text-muted)' }}>উচ্চ রক্তচাপ, ডায়াবেটিস ও ফ্যাটি লিভারের জন্য উপযোগী</p>
+            <h3 style={{ fontSize: '1.15rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>স্বাস্থ্য উপকারী</h3>
+            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>উচ্চ রক্তচাপ, ডায়াবেটিস ও ফ্যাটি লিভারের জন্য উপযোগী</p>
           </div>
           <div>
             <div style={{ fontSize: '2.2rem', marginBottom: '0.5rem' }}>🔬</div>
-            <h3 style={{ fontSize: '1rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>বিজ্ঞানসম্মত পরিচর্যা</h3>
-            <p style={{ fontSize: '0.83rem', color: 'var(--text-muted)' }}>৩০ দিনের অ্যান্টিবায়োটিক বিরতি প্রোটোকল</p>
+            <h3 style={{ fontSize: '1.15rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>বিজ্ঞানসম্মত পরিচর্যা</h3>
+            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>৩০ দিনের অ্যান্টিবায়োটিক বিরতি প্রোটোকল</p>
           </div>
           <div>
             <div style={{ fontSize: '2.2rem', marginBottom: '0.5rem' }}>📦</div>
-            <h3 style={{ fontSize: '1rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>সরাসরি ডেলিভারি</h3>
-            <p style={{ fontSize: '0.83rem', color: 'var(--text-muted)' }}>খামার থেকে সরাসরি আপনার দরজায়</p>
+            <h3 style={{ fontSize: '1.15rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>সরাসরি ডেলিভারি</h3>
+            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>খামার থেকে সরাসরি আপনার দরজায়</p>
           </div>
         </div>
       </section>
