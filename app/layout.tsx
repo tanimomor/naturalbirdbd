@@ -24,7 +24,10 @@ export const metadata: Metadata = {
     title: "Natural Birds BD — খাঁটি অর্গানিক পোল্ট্রি",
     description: "স্বাস্থ্যকর জীবনের জন্য প্রাকৃতিক প্রোটিন। ১০০% অর্গানিক পোল্ট্রি।",
     type: "website",
-  }
+  },
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23C9A84C'/><text x='50' y='70' font-size='60' text-anchor='middle'>🐦</text></svg>",
+  },
 };
 
 export default function RootLayout({
