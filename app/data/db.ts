@@ -30,9 +30,9 @@ export const db = {
       { name: "গরুর মাংস", fat: "বেশি চর্বি", fatStatus: "bad", health: "উচ্চ রক্তচাপ/ডায়াবেটিসের জন্য ঝুঁকিপূর্ণ", healthStatus: "bad" }
     ],
     gallery: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wild_Turkey_%286801931899%29.jpg/800px-Wild_Turkey_%286801931899%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wild_Turkey_strut.jpg/800px-Wild_Turkey_strut.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wild_Turkey.jpg/800px-Wild_Turkey.jpg"
+      "/farm_images/turkey2.jpg",
+      "/farm_images/turkey3.jpg",
+      "/farm_images/turkey4.jpg"
     ],
     videos: [
       "https://www.youtube.com/embed/0N-Bf2S1oWs?si=UDyBFoQMth86XbN-"
@@ -70,9 +70,9 @@ export const db = {
       { name: "ব্রয়লার মুরগি", fat: "বেশি চর্বি", fatStatus: "bad", health: "ঝুঁকিপূর্ণ", healthStatus: "bad" }
     ],
     gallery: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Pekin_duck_%28Anas_platyrhynchos_domestica%29.jpg/800px-Pekin_duck_%28Anas_platyrhynchos_domestica%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pekin_duckling.jpg/800px-Pekin_duckling.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pekin_Duck_in_water.jpg/800px-Pekin_Duck_in_water.jpg"
+      "/farm_images/duck.jpg",
+      "/farm_images/duck2.jpg",
+      "/farm_images/duck3.jpg"
     ],
     videos: [],
     faq: [
@@ -105,9 +105,9 @@ export const db = {
       { name: "ব্রয়লার মুরগি", fat: "বেশি চর্বি", fatStatus: "bad", health: "ঝুঁকিপূর্ণ", healthStatus: "bad" }
     ],
     gallery: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Coturnix_coturnix_2.jpg/800px-Coturnix_coturnix_2.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Japanese_Quail_%28Coturnix_japonica%29_male.jpg/800px-Japanese_Quail_%28Coturnix_japonica%29_male.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/California_Quail_%28Callipepla_californica%29_male.jpg/800px-California_Quail_%28Callipepla_californica%29_male.jpg"
+      "/farm_images/quil.jpg",
+      "/farm_images/quil2.jpg",
+      "/farm_images/quil3.jpg"
     ],
     videos: [],
     faq: [
@@ -140,9 +140,8 @@ export const db = {
       { name: "ব্রয়লার মুরগি", fat: "বেশি চর্বি", fatStatus: "bad", health: "ঝুঁকিপূর্ণ", healthStatus: "bad" }
     ],
     gallery: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Black_Francolin_%28Francolinus_francolinus%29.jpg/800px-Black_Francolin_%28Francolinus_francolinus%29.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Grey_Francolin_%28Francolinus_pondicerianus%29_in_Hyderabad%2C_AP_W_IMG_0083.jpg/800px-Grey_Francolin_%28Francolinus_pondicerianus%29_in_Hyderabad%2C_AP_W_IMG_0083.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Painted_Francolin_Francolinus_pictus.jpg/800px-Painted_Francolin_Francolinus_pictus.jpg"
+      "/farm_images/titir.jpg",
+      "/farm_images/titir2.jpg"
     ],
     videos: [],
     faq: [
