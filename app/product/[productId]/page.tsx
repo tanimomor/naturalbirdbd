@@ -30,17 +30,57 @@ export default function ProductDetailPage({
     qty: "1",
     note: ""
   });
+  const [formError, setFormError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const isTurnstileEnabled = process.env.NEXT_PUBLIC_ENABLE_TURNSTILE !== 'false';
 
+  const handleFieldChange = (field: string, value: string) => {
+    setFormError(null);
+    setFormState(prev => ({ ...prev, [field]: value }));
+  };
+
+  const validateForm = () => {
+    if (!formState.name.trim()) {
+      setFormError("দয়া করে আপনার নাম লিখুন।");
+      return false;
+    }
+
+    const phone = formState.phone.trim();
+    if (!phone) {
+      setFormError("দয়া করে মোবাইল নম্বর লিখুন।");
+      return false;
+    }
+
+    if (!/^[0-9]{11}$/.test(phone)) {
+      setFormError("মোবাইল নম্বর ১১ সংখ্যার হতে হবে।");
+      return false;
+    }
+
+    if (!formState.address.trim()) {
+      setFormError("দয়া করে ঠিকানা লিখুন।");
+      return false;
+    }
+
+    if (!formState.qty.trim() || Number(formState.qty) < 1) {
+      setFormError("অনুগ্রহ করে সঠিক পরিমাণ দিন।");
+      return false;
+    }
+
+    return true;
+  };
+
   const submitOrder = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isTurnstileEnabled && !turnstileToken) {
-      alert("দয়া করে ক্যাপচা পূরণ করুন।");
+    if (!validateForm()) {
       return;
     }
+    if (isTurnstileEnabled && !turnstileToken) {
+      setFormError("দয়া করে ক্যাপচা পূরণ করুন।");
+      return;
+    }
+    setFormError(null);
     setIsSubmitting(true);
     try {
       const result = await submitOrderToTelegram({ ...formState, turnstileToken: turnstileToken || "" });
@@ -196,24 +236,29 @@ export default function ProductDetailPage({
 
               {!formSuccess ? (
                 <form id="order-form" onSubmit={submitOrder}>
+                  {formError && (
+                    <div className="form-error" style={{ color: '#b02a37', background: 'rgba(176, 42, 55, 0.1)', border: '1px solid rgba(176, 42, 55, 0.2)', borderRadius: '10px', padding: '0.85rem 1rem', marginBottom: '1rem' }}>
+                      {formError}
+                    </div>
+                  )}
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="f-name">আপনার নাম *</label>
-                      <input type="text" id="f-name" placeholder="পূর্ণ নাম লিখুন" required value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} />
+                      <input type="text" id="f-name" placeholder="পূর্ণ নাম লিখুন" required value={formState.name} onChange={e => handleFieldChange('name', e.target.value)} />
                     </div>
                     <div className="form-group">
                       <label htmlFor="f-phone">মোবাইল নম্বর *</label>
-                      <input type="tel" id="f-phone" placeholder="০১XXXXXXXXX" required value={formState.phone} onChange={e => setFormState({ ...formState, phone: e.target.value })} />
+                      <input type="tel" id="f-phone" placeholder="০১XXXXXXXXX" required value={formState.phone} onChange={e => handleFieldChange('phone', e.target.value)} />
                     </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="f-address">ঠিকানা *</label>
-                    <input type="text" id="f-address" placeholder="আপনার সম্পূর্ণ ঠিকানা" required value={formState.address} onChange={e => setFormState({ ...formState, address: e.target.value })} />
+                    <input type="text" id="f-address" placeholder="আপনার সম্পূর্ণ ঠিকানা" required value={formState.address} onChange={e => handleFieldChange('address', e.target.value)} />
                   </div>
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="f-product">পণ্য</label>
-                      <select id="f-product" value={formState.product} onChange={e => setFormState({ ...formState, product: e.target.value })}>
+                      <select id="f-product" value={formState.product} onChange={e => handleFieldChange('product', e.target.value)}>
                         {Object.values(db).map((p) => (
                           <option key={p.id} value={p.name}>{p.name}</option>
                         ))}
@@ -221,12 +266,12 @@ export default function ProductDetailPage({
                     </div>
                     <div className="form-group">
                       <label htmlFor="f-qty">পরিমাণ (কেজি)</label>
-                      <input type="number" id="f-qty" placeholder="যেমন: ২" min="1" value={formState.qty} onChange={e => setFormState({ ...formState, qty: e.target.value })} />
+                      <input type="number" id="f-qty" placeholder="যেমন: ২" min="1" value={formState.qty} onChange={e => handleFieldChange('qty', e.target.value)} />
                     </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="f-note">মন্তব্য</label>
-                    <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => setFormState({ ...formState, note: e.target.value })}></textarea>
+                    <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => handleFieldChange('note', e.target.value)}></textarea>
                   </div>
                   {isTurnstileEnabled && (
                     <div className="form-group" style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
