@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Bengali, Noto_Serif_Bengali } from "next/font/google";
 import Link from "next/link";
+import { OrderNavLink } from "./components/OrderNavLink";
 import "./globals.css";
 
 const notoSans = Noto_Sans_Bengali({
@@ -47,7 +48,7 @@ export default function RootLayout({
                 <span className="tagline">খাঁটি অর্গানিক পোল্ট্রি খামার</span>
               </div>
             </Link>
-            <Link href="/product/turkey#order-section" className="header-cta">অর্ডার করুন</Link>
+            <OrderNavLink />
           </div>
         </header>
 

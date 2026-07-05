@@ -1,5 +1,6 @@
 import { db } from "./data/db";
 import Link from "next/link";
+import { OrderForm } from "./components/OrderForm";
 
 export default function Home() {
   return (
@@ -62,6 +63,12 @@ export default function Home() {
             <h3 style={{ fontSize: '1.15rem', color: 'var(--green-dark)', marginBottom: '0.3rem' }}>সরাসরি ডেলিভারি</h3>
             <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>খামার থেকে সরাসরি আপনার দরজায়</p>
           </div>
+        </div>
+      </section>
+
+      <section id="order-section" className="content-section" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <OrderForm defaultProduct={Object.values(db)[0]?.name || ""} />
         </div>
       </section>
     </div>
