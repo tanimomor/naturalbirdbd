@@ -35,7 +35,7 @@ export const db = {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wild_Turkey.jpg/800px-Wild_Turkey.jpg"
     ],
     videos: [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      "https://www.youtube.com/embed/0N-Bf2S1oWs?si=UDyBFoQMth86XbN-"
     ],
     faq: [
       { q: "টার্কির মাংস কি ব্রয়লার মুরগির চেয়ে স্বাস্থ্যকর?", a: "হ্যাঁ, টার্কির মাংসে চর্বির পরিমাণ অনেক কম এবং এটি প্রোটিন ও সেলেনিয়ামে ভরপুর যা ব্রয়লার মুরগিতে খুব একটা পাওয়া যায় না।" },
