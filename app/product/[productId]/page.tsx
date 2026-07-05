@@ -33,16 +33,17 @@ export default function ProductDetailPage({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSuccess, setFormSuccess] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const isTurnstileEnabled = process.env.NEXT_PUBLIC_ENABLE_TURNSTILE !== 'false';
 
   const submitOrder = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!turnstileToken) {
+    if (isTurnstileEnabled && !turnstileToken) {
       alert("দয়া করে ক্যাপচা পূরণ করুন।");
       return;
     }
     setIsSubmitting(true);
     try {
-      const result = await submitOrderToTelegram({ ...formState, turnstileToken });
+      const result = await submitOrderToTelegram({ ...formState, turnstileToken: turnstileToken || "" });
       if (result.success) {
         setFormSuccess(true);
       } else {
@@ -192,27 +193,27 @@ export default function ProductDetailPage({
             <div className="order-section">
               <h2>অর্ডারের অনুরোধ করুন</h2>
               <p>নিচের ফর্মটি পূরণ করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
-              
+
               {!formSuccess ? (
                 <form id="order-form" onSubmit={submitOrder}>
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="f-name">আপনার নাম *</label>
-                      <input type="text" id="f-name" placeholder="পূর্ণ নাম লিখুন" required value={formState.name} onChange={e => setFormState({...formState, name: e.target.value})} />
+                      <input type="text" id="f-name" placeholder="পূর্ণ নাম লিখুন" required value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} />
                     </div>
                     <div className="form-group">
                       <label htmlFor="f-phone">মোবাইল নম্বর *</label>
-                      <input type="tel" id="f-phone" placeholder="০১XXXXXXXXX" required value={formState.phone} onChange={e => setFormState({...formState, phone: e.target.value})} />
+                      <input type="tel" id="f-phone" placeholder="০১XXXXXXXXX" required value={formState.phone} onChange={e => setFormState({ ...formState, phone: e.target.value })} />
                     </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="f-address">ঠিকানা *</label>
-                    <input type="text" id="f-address" placeholder="আপনার সম্পূর্ণ ঠিকানা" required value={formState.address} onChange={e => setFormState({...formState, address: e.target.value})} />
+                    <input type="text" id="f-address" placeholder="আপনার সম্পূর্ণ ঠিকানা" required value={formState.address} onChange={e => setFormState({ ...formState, address: e.target.value })} />
                   </div>
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="f-product">পণ্য</label>
-                      <select id="f-product" value={formState.product} onChange={e => setFormState({...formState, product: e.target.value})}>
+                      <select id="f-product" value={formState.product} onChange={e => setFormState({ ...formState, product: e.target.value })}>
                         {Object.values(db).map((p) => (
                           <option key={p.id} value={p.name}>{p.name}</option>
                         ))}
@@ -220,27 +221,29 @@ export default function ProductDetailPage({
                     </div>
                     <div className="form-group">
                       <label htmlFor="f-qty">পরিমাণ (কেজি)</label>
-                      <input type="number" id="f-qty" placeholder="যেমন: ২" min="1" value={formState.qty} onChange={e => setFormState({...formState, qty: e.target.value})} />
+                      <input type="number" id="f-qty" placeholder="যেমন: ২" min="1" value={formState.qty} onChange={e => setFormState({ ...formState, qty: e.target.value })} />
                     </div>
                   </div>
                   <div className="form-group">
                     <label htmlFor="f-note">মন্তব্য</label>
-                    <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => setFormState({...formState, note: e.target.value})}></textarea>
+                    <textarea id="f-note" placeholder="কোনো বিশেষ নির্দেশনা থাকলে লিখুন..." value={formState.note} onChange={e => setFormState({ ...formState, note: e.target.value })}></textarea>
                   </div>
-                  <div className="form-group" style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
-                    <Turnstile 
-                      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""} 
-                      onSuccess={(token) => setTurnstileToken(token)}
-                    />
-                  </div>
-                  <button type="submit" id="submit-btn" disabled={isSubmitting || !turnstileToken}>
+                  {isTurnstileEnabled && (
+                    <div className="form-group" style={{ display: 'flex', justifyContent: 'center', margin: '1.5rem 0' }}>
+                      <Turnstile
+                        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                        onSuccess={(token) => setTurnstileToken(token)}
+                      />
+                    </div>
+                  )}
+                  <button type="submit" id="submit-btn" disabled={isSubmitting || (isTurnstileEnabled && !turnstileToken)}>
                     {isSubmitting ? "পাঠানো হচ্ছে..." : "অনুরোধ পাঠান"}
                   </button>
                 </form>
               ) : (
                 <div id="form-success" style={{ display: 'block' }}>
                   <div className="success-icon">✅</div>
-                  <p><strong>ধন্যবাদ!</strong><br/>আপনার অনুরোধটি সফলভাবে গ্রহণ করা হয়েছে。<br/>খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
+                  <p><strong>ধন্যবাদ!</strong><br />আপনার অনুরোধটি সফলভাবে গ্রহণ করা হয়েছে。<br />খুব শীঘ্রই আমরা আপনার সঙ্গে যোগাযোগ করব।</p>
                 </div>
               )}
             </div>

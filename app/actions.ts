@@ -17,27 +17,31 @@ export async function submitOrderToTelegram(formData: {
     return { success: false, error: "Server configuration error" };
   }
 
-  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-  if (!turnstileSecret) {
-    console.error("Turnstile secret key is not set.");
-    return { success: false, error: "Server configuration error" };
-  }
+  const isTurnstileEnabled = process.env.NEXT_PUBLIC_ENABLE_TURNSTILE !== 'false';
 
-  const verifyFormData = new URLSearchParams();
-  verifyFormData.append('secret', turnstileSecret);
-  verifyFormData.append('response', formData.turnstileToken);
-
-  try {
-    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-      method: 'POST',
-      body: verifyFormData,
-    });
-    const outcome = await res.json();
-    if (!outcome.success) {
-      return { success: false, error: "ক্যাপচা যাচাইকরণ ব্যর্থ হয়েছে" }; // Captcha verification failed
+  if (isTurnstileEnabled) {
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+    if (!turnstileSecret) {
+      console.error("Turnstile secret key is not set.");
+      return { success: false, error: "Server configuration error" };
     }
-  } catch (err) {
-    return { success: false, error: "ক্যাপচা যাচাইকরণে ত্রুটি" }; // Error verifying captcha
+
+    const verifyFormData = new URLSearchParams();
+    verifyFormData.append('secret', turnstileSecret);
+    verifyFormData.append('response', formData.turnstileToken);
+
+    try {
+      const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        body: verifyFormData,
+      });
+      const outcome = await res.json();
+      if (!outcome.success) {
+        return { success: false, error: "ক্যাপচা যাচাইকরণ ব্যর্থ হয়েছে" }; // Captcha verification failed
+      }
+    } catch (err) {
+      return { success: false, error: "ক্যাপচা যাচাইকরণে ত্রুটি" }; // Error verifying captcha
+    }
   }
 
   const message = `
