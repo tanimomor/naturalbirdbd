@@ -35,7 +35,7 @@ export const db = {
       "/farm_images/turkey4.jpg"
     ],
     videos: [
-      "https://www.youtube.com/embed/0N-Bf2S1oWs?si=UDyBFoQMth86XbN-"
+      "https://www.youtube-nocookie.com/embed/0N-Bf2S1oWs?si=UDyBFoQMth86XbN-"
     ],
     faq: [
       { q: "টার্কির মাংস কি ব্রয়লার মুরগির চেয়ে স্বাস্থ্যকর?", a: "হ্যাঁ, টার্কির মাংসে চর্বির পরিমাণ অনেক কম এবং এটি প্রোটিন ও সেলেনিয়ামে ভরপুর যা ব্রয়লার মুরগিতে খুব একটা পাওয়া যায় না।" },
@@ -75,7 +75,7 @@ export const db = {
       "/farm_images/duck3.jpg"
     ],
     videos: [
-      "https://www.youtube.com/embed/ARHmduIGY6g"
+      "https://www.youtube-nocookie.com/embed/ARHmduIGY6g"
     ],
     faq: [
       { q: "চীনা হাঁস এবং পাতি হাঁসের মধ্যে পার্থক্য কি?", a: "চীনা হাঁসের মাংসে চর্বির পরিমাণ পাতি হাঁসের তুলনায় উল্লেখযোগ্যভাবে কম থাকে।" }
@@ -112,7 +112,7 @@ export const db = {
       "/farm_images/quil3.jpg"
     ],
     videos: [
-      "https://www.youtube.com/embed/cebzX2yIeVw"
+      "https://www.youtube-nocookie.com/embed/cebzX2yIeVw"
     ],
     faq: [
       { q: "কোয়েলের মাংস কি বাচ্চারা খেতে পারবে?", a: "অবশ্যই। কোয়েলের মাংস খুব সহজে হজম হয় এবং বাচ্চাদের শারীরিক ও মানসিক বিকাশে সাহায্য করে।" }
@@ -149,7 +149,7 @@ export const db = {
       "/farm_images/titir-3.jpg"
     ],
     videos: [
-      "https://www.youtube.com/embed/IWP2rz5mT1w"
+      "https://www.youtube-nocookie.com/embed/IWP2rz5mT1w"
     ],
     faq: [
       { q: "তিতিরের মাংসে কি বন্য স্বাদ থাকে?", a: "হ্যাঁ, প্রাকৃতিকভাবে পালিত হওয়ায় এতে চমৎকার একটি প্রাকৃতিক স্বাদ থাকে যা ব্রয়লারে পাওয়া যায় না।" }
