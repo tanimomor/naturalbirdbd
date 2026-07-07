@@ -2,7 +2,7 @@ export const db = {
   turkey: {
     id: "turkey",
     name: "টার্কি",
-    tagline: "খনিজ পদার্থ ও সেলেনিয়াম সমৃদ্ধ, কম চর্বিযুক্ত — বিষণ্নতা প্রতিরোধে সহায়ক",
+    tagline: "খনিজ পদার্থ ও সেলেনিয়াম সমৃদ্ধ, কম চর্বি এবং বিষণ্নতা প্রতিরোধী",
     emoji: "🦃",
     image: "https://images.unsplash.com/photo-1649954275372-94324e64a54b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHx0dXJrZXklMjBiaXJkJTIwbmF0dXJlfGVufDB8fHx8MTc4MzE5NjY5MHww&ixlib=rb-4.1.0&q=85",
     whyChoose: "টার্কি একটি অত্যন্ত পুষ্টিকর, কম চর্বিযুক্ত প্রোটিনের উৎস। এটি বিশেষভাবে খনিজ পদার্থ ও সেলেনিয়ামে সমৃদ্ধ। সেলেনিয়ামের ঘাটতি চল্লিশ ঊর্ধ্ব বয়সী নারী-পুরুষদের মধ্যে বিষণ্নতাজনিত উপসর্গের সাথে সম্পর্কিত। সঠিকভাবে প্রক্রিয়াজাত ও গ্রহণ করা হলে, আমাদের অর্গানিক টার্কি সেই ঘাটতি পূরণে সহায়ক হতে পারে।",
@@ -46,9 +46,9 @@ export const db = {
   duck: {
     id: "duck",
     name: "চীনা হাঁস",
-    tagline: "হৃদয় ও বিপাক-বান্ধব, কম চর্বিযুক্ত হাঁসের মাংস",
+    tagline: "হৃদয় ও বিপাক সাহায্যী, কম চর্বি এবং পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦆",
-    image: "https://images.unsplash.com/photo-1706458605571-b8dcd3d2c5ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHx3aGl0ZSUyMGR1Y2slMjBuYXR1cmV8ZW58MHx8fHwxNzgzMTk2Njk5fDA&ixlib=rb-4.1.0&q=85",
+    image: "/farm_images/china-hash/china-hash.jpeg",
     whyChoose: "চীনা হাঁসের মাংস প্রচলিত হাঁস বা মুরগির তুলনায় কম চর্বিযুক্ত। এটি উচ্চ রক্তচাপ, ডায়াবেটিস এবং ফ্যাটি লিভার সমস্যায় আক্রান্ত ব্যক্তিদের জন্য হৃদয় ও বিপাক-বান্ধব একটি চমৎকার প্রোটিনের বিকল্প।",
     nutrition: [
       { icon: "💪", title: "প্রোটিন", desc: "শরীরের গঠনে অপরিহার্য" },
@@ -70,9 +70,9 @@ export const db = {
       { name: "ব্রয়লার মুরগি", fat: "বেশি চর্বি", fatStatus: "bad", health: "ঝুঁকিপূর্ণ", healthStatus: "bad" }
     ],
     gallery: [
-      "/farm_images/duck.jpg",
-      "/farm_images/duck2.jpg",
-      "/farm_images/duck3.jpg"
+      "/farm_images/china-hash/china-hash.jpeg",
+      "/farm_images/china-hash/china-hash2.jpg",
+      "/farm_images/china-hash/china-hash.webp"
     ],
     videos: [
       "https://www.youtube-nocookie.com/embed/ARHmduIGY6g"
@@ -84,9 +84,9 @@ export const db = {
   quail: {
     id: "quail",
     name: "কোয়েল",
-    tagline: "পাতলা, পুষ্টিগুণ সমৃদ্ধ মাংস — পরিমিত খাদ্যাভ্যাসের উপযোগী",
+    tagline: "পাতলা, পুষ্টিগুণ সমৃদ্ধ মাংস এবং পরিমিত খাদ্যের উপযোগী",
     emoji: "🐦",
-    image: "https://images.unsplash.com/photo-1676826518828-ab2e5899b99c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxxdWFpbCUyMGJpcmR8ZW58MHx8fHwxNzgzMTk2NjkwfDA&ixlib=rb-4.1.0&q=85",
+    image: "/farm_images/coel/coel2.webp",
     whyChoose: "কোয়েলের মাংস অত্যন্ত সুস্বাদু এবং পুষ্টিগুণে ভরপুর। এটি খুবই পাতলা (lean) মাংস, যা পরিমিত খাদ্যাভ্যাস (diet) অনুসরণকারীদের জন্য আদর্শ। এতে কোলেস্টেরল কম এবং প্রোটিন বেশি থাকে।",
     nutrition: [
       { icon: "💪", title: "উচ্চ প্রোটিন", desc: "দৈনিক প্রোটিনের চাহিদা পূরণে সহায়ক" },
@@ -121,7 +121,7 @@ export const db = {
   francolin: {
     id: "francolin",
     name: "তিতির",
-    tagline: "কম চর্বিযুক্ত স্বাস্থ্যকর বন্য স্বাদের মাংস",
+    tagline: "কম চর্বি, স্বাস্থ্যকর এবং বন্য স্বাদের পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦚",
     image: "https://images.unsplash.com/photo-1701717546877-4a262ff7b9e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxndWluZWElMjBmb3dsJTIwYmlyZHxlbnwwfHx8fDE3ODMxOTY2OTl8MA&ixlib=rb-4.1.0&q=85",
     whyChoose: "তিতির একটি অসাধারণ অর্গানিক পাখি যার মাংসে চর্বির পরিমাণ খুবই কম। যারা গতানুগতিক মাংসের বাইরে স্বাস্থ্যকর বিকল্প খুঁজছেন, তিতির তাদের জন্য সেরা পছন্দ।",

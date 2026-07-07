@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23C9A84C'/><text x='50' y='70' font-size='60' text-anchor='middle'>🐦</text></svg>",
+    icon: "/logos/terky.webp.jpeg",
   },
 };
 
@@ -42,7 +42,7 @@ export default function RootLayout({
         <header id="site-header">
           <div className="header-inner">
             <Link href="/" className="logo-wrap">
-              <div className="logo-icon">🐦</div>
+              <img src="/logos/turkey.jpg" alt="Natural Birds BD Logo" className="logo-icon" style={{ height: '50px', width: 'auto' }} />
               <div className="logo-text">
                 <span className="name">Natural Birds BD</span>
                 <span className="tagline">খাঁটি অর্গানিক পোল্ট্রি খামার</span>
@@ -56,7 +56,7 @@ export default function RootLayout({
           {children}
         </div>
 
-        <a id="wa-btn" href="https://wa.me/8801716165878" target="_blank" rel="noopener noreferrer" title="WhatsApp এ যোগাযোগ করুন">💬</a>
+        <a id="wa-btn" href="https://wa.me/8801644292288" target="_blank" rel="noopener noreferrer" title="WhatsApp এ যোগাযোগ করুন">💬</a>
 
         <footer id="site-footer">
           <div className="footer-logo">🐦 Natural Birds BD</div>
