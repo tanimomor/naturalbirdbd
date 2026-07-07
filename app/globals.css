@@ -439,7 +439,8 @@
         .hero-cta-row {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap
+            flex-wrap: wrap;
+            width: 100%
         }
 
         .back-btn {
@@ -537,6 +538,13 @@
             font-size: 1.1rem;
             color: var(--text-muted);
             line-height: 1.8
+        }
+
+        @media(max-width:480px) {
+            .nutrition-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
         }
 
         /* WHY US */
@@ -1145,6 +1153,11 @@
 
             .hero-cta-row {
                 flex-direction: column
+            }
+
+            .hero-cta-row .btn-primary {
+                width: 100%;
+                justify-content: center
             }
 
             .product-hero {
