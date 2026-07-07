@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/logos/terky.webp.jpeg",
+    icon: "/logos/logo-gemini-cropped.jpeg",
   },
 };
 

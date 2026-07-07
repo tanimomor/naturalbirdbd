@@ -439,8 +439,7 @@
         .hero-cta-row {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
-            width: 100%
+            flex-wrap: wrap
         }
 
         .back-btn {
@@ -1153,11 +1152,6 @@
 
             .hero-cta-row {
                 flex-direction: column
-            }
-
-            .hero-cta-row .btn-primary {
-                width: 100%;
-                justify-content: center
             }
 
             .product-hero {
