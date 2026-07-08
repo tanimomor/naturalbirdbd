@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/turkey`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/chinese-duck`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/quail`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${SITE_URL}/pheasant`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE_URL}/titir`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/blog`, changeFrequency: "weekly", priority: 0.7 },
   ];
 

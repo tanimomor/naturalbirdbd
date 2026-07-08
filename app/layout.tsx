@@ -119,7 +119,7 @@ export default function RootLayout({
             <Link href="/turkey">টার্কি</Link>
             <Link href="/chinese-duck">চীনা হাঁস</Link>
             <Link href="/quail">কোয়েল</Link>
-            <Link href="/pheasant">তিতির</Link>
+            <Link href="/titir">তিতির</Link>
             <Link href="/blog">ব্লগ</Link>
             <Link href="/about">আমাদের সম্পর্কে</Link>
             <Link href="/contact">যোগাযোগ</Link>

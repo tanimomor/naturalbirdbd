@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: product.seoDescription,
   keywords: product.keywords,
   alternates: {
-    canonical: "/pheasant",
+    canonical: "/titir",
   },
   openGraph: {
     title: product.seoTitle,
     description: product.seoDescription,
-    url: `${SITE_URL}/pheasant`,
+    url: `${SITE_URL}/titir`,
     type: "website",
     images: [product.image],
   },
@@ -28,24 +28,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PheasantPage() {
+export default function TitirPage() {
   return (
     <>
       <Script
-        id="pheasant-product-jsonld"
+        id="titir-product-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(productJsonLd(product)),
         }}
       />
       <Script
-        id="pheasant-breadcrumb-jsonld"
+        id="titir-breadcrumb-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "হোম", url: `${SITE_URL}/` },
-              { name: product.name, url: `${SITE_URL}/pheasant` },
+              { name: product.name, url: `${SITE_URL}/titir` },
             ])
           ),
         }}

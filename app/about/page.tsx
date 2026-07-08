@@ -107,7 +107,7 @@ export default function AboutPage() {
             <div className="wi" aria-hidden="true">🐦</div>
             <div><h3>কোয়েল</h3><p>বিস্তারিত জানুন</p></div>
           </Link>
-          <Link href="/pheasant" className="why-card">
+          <Link href="/titir" className="why-card">
             <div className="wi" aria-hidden="true">🦚</div>
             <div><h3>তিতির</h3><p>বিস্তারিত জানুন</p></div>
           </Link>

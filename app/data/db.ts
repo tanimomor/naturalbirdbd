@@ -132,11 +132,11 @@ export const db = {
   },
   francolin: {
     id: "francolin",
-    slug: "pheasant",
+    slug: "titir",
     name: "তিতির",
     seoTitle: "তিতির (Pheasant) — ১০০% অর্গানিক তিতির পাখির মাংস বাংলাদেশ",
     seoDescription: "Natural Birds BD এর ১০০% অর্গানিক তিতির পাখির মাংস — কম চর্বি, উচ্চ প্রোটিন ও প্রাকৃতিক স্বাদ। বাণিজ্যিক খাদ্যমুক্ত মুক্ত-বিচরণ পালন, খামার থেকে সরাসরি ডেলিভারি।",
-    keywords: ["তিতির বাংলাদেশ", "pheasant Bangladesh", "অর্গানিক তিতির", "organic pheasant meat Bangladesh", "তিতিরের দাম", "Natural Birds BD তিতির"],
+    keywords: ["তিতির বাংলাদেশ", "titir Bangladesh", "pheasant Bangladesh", "অর্গানিক তিতির", "organic pheasant meat Bangladesh", "তিতিরের দাম", "Natural Birds BD তিতির"],
     tagline: "কম চর্বি, স্বাস্থ্যকর এবং বন্য স্বাদের পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦚",
     image: "https://images.unsplash.com/photo-1701717546877-4a262ff7b9e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxndWluZWElMjBmb3dsJTIwYmlyZHxlbnwwfHx8fDE3ODMxOTY2OTl8MA&ixlib=rb-4.1.0&q=85",

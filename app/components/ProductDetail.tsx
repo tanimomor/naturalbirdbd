@@ -10,7 +10,7 @@ const ALL_PRODUCT_LINKS = [
   { slug: "turkey", name: "টার্কি", emoji: "🦃" },
   { slug: "chinese-duck", name: "চীনা হাঁস", emoji: "🦆" },
   { slug: "quail", name: "কোয়েল", emoji: "🐦" },
-  { slug: "pheasant", name: "তিতির", emoji: "🦚" },
+  { slug: "titir", name: "তিতির", emoji: "🦚" },
 ];
 
 export function ProductDetail({ product }: { product: Product }) {

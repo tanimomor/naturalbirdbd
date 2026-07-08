@@ -161,7 +161,7 @@ export const blogPosts: BlogPost[] = [
     title: "তিতির পাখির যত্ন ও পরিচর্যা গাইড",
     description:
       "তিতির পাখি (Pheasant) পালনের সঠিক পদ্ধতি, মুক্ত-বিচরণ ব্যবস্থাপনা, খাদ্য ও স্বাস্থ্যসেবা নিয়ে সম্পূর্ণ গাইড।",
-    relatedProductSlug: "pheasant",
+    relatedProductSlug: "titir",
     relatedProductName: "তিতির",
     publishedDate: "2026-03-25",
     updatedDate: "2026-06-15",

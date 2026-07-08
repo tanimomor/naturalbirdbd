@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const PRODUCT_PATHS = ["/turkey", "/chinese-duck", "/quail", "/pheasant"];
+const PRODUCT_PATHS = ["/turkey", "/chinese-duck", "/quail", "/titir"];
 
 export function OrderNavLink() {
   const pathname = usePathname();
