@@ -49,24 +49,26 @@ export default function Home() {
       </section>
 
       <div className="hero-divider-wrap" aria-hidden="true">
-        <div className="hero-divider-circle">
-          <div className="hero-divider-half">
-            <Image
-              src="/farm_images/owner/adv-al-mamun-img1.jpeg"
-              alt=""
-              fill
-              sizes="180px"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-          <div className="hero-divider-half">
-            <Image
-              src="/farm_images/owner/adv-al-mamun-img2.jpeg"
-              alt=""
-              fill
-              sizes="180px"
-              style={{ objectFit: "cover" }}
-            />
+        <div className="hero-divider-ring">
+          <div className="hero-divider-circle">
+            <div className="hero-divider-half">
+              <Image
+                src="/farm_images/owner/adv-al-mamun-img1.jpeg"
+                alt=""
+                fill
+                sizes="180px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="hero-divider-half">
+              <Image
+                src="/farm_images/owner/adv-al-mamun-img2.jpeg"
+                alt=""
+                fill
+                sizes="180px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
         </div>
       </div>
