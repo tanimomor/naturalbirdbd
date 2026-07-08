@@ -8,7 +8,7 @@ export const db = {
     keywords: ["টার্কি বাংলাদেশ", "অর্গানিক টার্কি", "turkey Bangladesh", "organic turkey price Bangladesh", "টার্কির দাম", "Natural Birds BD টার্কি"],
     tagline: "খনিজ পদার্থ ও সেলেনিয়াম সমৃদ্ধ, কম চর্বি এবং বিষণ্নতা প্রতিরোধী",
     emoji: "🦃",
-    image: "https://images.unsplash.com/photo-1649954275372-94324e64a54b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHx0dXJrZXklMjBiaXJkJTIwbmF0dXJlfGVufDB8fHx8MTc4MzE5NjY5MHww&ixlib=rb-4.1.0&q=85",
+    image: "/farm_images/turkey2.jpg",
     whyChoose: "টার্কি একটি অত্যন্ত পুষ্টিকর, কম চর্বিযুক্ত প্রোটিনের উৎস। এটি বিশেষভাবে খনিজ পদার্থ ও সেলেনিয়ামে সমৃদ্ধ। সেলেনিয়ামের ঘাটতি চল্লিশ ঊর্ধ্ব বয়সী নারী-পুরুষদের মধ্যে বিষণ্নতাজনিত উপসর্গের সাথে সম্পর্কিত। সঠিকভাবে প্রক্রিয়াজাত ও গ্রহণ করা হলে, আমাদের অর্গানিক টার্কি সেই ঘাটতি পূরণে সহায়ক হতে পারে।",
     nutrition: [
       { icon: "💪", title: "উচ্চ প্রোটিন", desc: "দৈনিক প্রোটিনের চাহিদা পূরণে সহায়ক" },
@@ -139,7 +139,7 @@ export const db = {
     keywords: ["তিতির বাংলাদেশ", "titir Bangladesh", "pheasant Bangladesh", "অর্গানিক তিতির", "organic pheasant meat Bangladesh", "তিতিরের দাম", "Natural Birds BD তিতির"],
     tagline: "কম চর্বি, স্বাস্থ্যকর এবং বন্য স্বাদের পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦚",
-    image: "https://images.unsplash.com/photo-1701717546877-4a262ff7b9e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxndWluZWElMjBmb3dsJTIwYmlyZHxlbnwwfHx8fDE3ODMxOTY2OTl8MA&ixlib=rb-4.1.0&q=85",
+    image: "/farm_images/titir.jpg",
     whyChoose: "তিতির একটি অসাধারণ অর্গানিক পাখি যার মাংসে চর্বির পরিমাণ খুবই কম। যারা গতানুগতিক মাংসের বাইরে স্বাস্থ্যকর বিকল্প খুঁজছেন, তিতির তাদের জন্য সেরা পছন্দ।",
     nutrition: [
       { icon: "💪", title: "প্রোটিন", desc: "উচ্চমাত্রায় প্রোটিন সমৃদ্ধ" },
