@@ -28,6 +28,7 @@
             --radius-md: 16px;
             --radius-lg: 24px;
             --radius-xl: 32px;
+            --hero-divider-size: clamp(120px, 22vw, 180px);
         }
 
         html {
@@ -183,7 +184,7 @@
 
         .home-hero {
             background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-mid) 60%, #3a7d5a 100%);
-            padding: 4rem 1.5rem 5rem;
+            padding: 4rem 1.5rem calc(3rem + var(--hero-divider-size) / 2);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -235,17 +236,16 @@
 
         /* HERO / PRODUCTS TRANSITION CIRCLE */
         .hero-divider-wrap {
-            --divider-size: clamp(120px, 22vw, 180px);
             position: relative;
             z-index: 5;
             display: flex;
             justify-content: center;
-            margin-top: calc(var(--divider-size) / -2);
+            margin-top: calc(var(--hero-divider-size) / -2);
         }
 
         .hero-divider-circle {
-            width: var(--divider-size);
-            height: var(--divider-size);
+            width: var(--hero-divider-size);
+            height: var(--hero-divider-size);
             border-radius: 50%;
             overflow: hidden;
             display: flex;
@@ -1170,7 +1170,7 @@
             }
 
             .home-hero {
-                padding: 3rem 1rem 3.5rem;
+                padding: 3rem 1rem calc(2rem + var(--hero-divider-size) / 2);
             }
 
             .hero-badges {
