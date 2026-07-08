@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const PRODUCT_PATHS = ["/turkey", "/chinese-duck", "/quail", "/pheasant"];
+
 export function OrderNavLink() {
   const pathname = usePathname();
-  const orderHref = pathname === "/" ? "#order-section" : pathname.startsWith("/product/") ? `${pathname}#order-section` : "/#order-section";
+  const orderHref = pathname === "/" ? "#order-section" : PRODUCT_PATHS.includes(pathname) ? `${pathname}#order-section` : "/#order-section";
 
   return (
     <Link href={orderHref} className="header-cta">

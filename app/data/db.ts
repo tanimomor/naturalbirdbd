@@ -1,7 +1,11 @@
 export const db = {
   turkey: {
     id: "turkey",
+    slug: "turkey",
     name: "টার্কি",
+    seoTitle: "টার্কি — ১০০% অর্গানিক টার্কি মাংস বাংলাদেশ",
+    seoDescription: "Natural Birds BD থেকে ১০০% অর্গানিক, বাণিজ্যিক খাদ্যমুক্ত টার্কি কিনুন। খনিজ পদার্থ ও সেলেনিয়াম সমৃদ্ধ, কম চর্বিযুক্ত স্বাস্থ্যকর মাংস, খামার থেকে সরাসরি ডেলিভারি।",
+    keywords: ["টার্কি বাংলাদেশ", "অর্গানিক টার্কি", "turkey Bangladesh", "organic turkey price Bangladesh", "টার্কির দাম", "Natural Birds BD টার্কি"],
     tagline: "খনিজ পদার্থ ও সেলেনিয়াম সমৃদ্ধ, কম চর্বি এবং বিষণ্নতা প্রতিরোধী",
     emoji: "🦃",
     image: "https://images.unsplash.com/photo-1649954275372-94324e64a54b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHx0dXJrZXklMjBiaXJkJTIwbmF0dXJlfGVufDB8fHx8MTc4MzE5NjY5MHww&ixlib=rb-4.1.0&q=85",
@@ -45,7 +49,11 @@ export const db = {
   },
   duck: {
     id: "duck",
+    slug: "chinese-duck",
     name: "চীনা হাঁস",
+    seoTitle: "চীনা হাঁস — ১০০% অর্গানিক চীনা হাঁসের মাংস বাংলাদেশ",
+    seoDescription: "Natural Birds BD এর ১০০% অর্গানিক চীনা হাঁসের মাংস — কম চর্বি, হৃদয় ও বিপাক-বান্ধব প্রোটিন। বাণিজ্যিক খাদ্যমুক্ত পালন, খামার থেকে সরাসরি ডেলিভারি সারাদেশে।",
+    keywords: ["চীনা হাঁস বাংলাদেশ", "অর্গানিক হাঁস", "chinese duck Bangladesh", "organic duck meat Bangladesh", "চীনা হাঁসের দাম", "Natural Birds BD হাঁস"],
     tagline: "হৃদয় ও বিপাক সাহায্যী, কম চর্বি এবং পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦆",
     image: "/farm_images/china-hash/china-hash.jpeg",
@@ -83,7 +91,11 @@ export const db = {
   },
   quail: {
     id: "quail",
+    slug: "quail",
     name: "কোয়েল",
+    seoTitle: "কোয়েল — ১০০% অর্গানিক কোয়েল পাখির মাংস বাংলাদেশ",
+    seoDescription: "Natural Birds BD এর ১০০% অর্গানিক কোয়েল পাখির মাংস — উচ্চ প্রোটিন, কম কোলেস্টেরল, ডায়েট-উপযোগী। বাণিজ্যিক খাদ্যমুক্ত পালন, খামার থেকে সরাসরি ডেলিভারি।",
+    keywords: ["কোয়েল বাংলাদেশ", "অর্গানিক কোয়েল", "quail Bangladesh", "organic quail meat Bangladesh", "কোয়েলের দাম", "Natural Birds BD কোয়েল"],
     tagline: "পাতলা, পুষ্টিগুণ সমৃদ্ধ মাংস এবং পরিমিত খাদ্যের উপযোগী",
     emoji: "🐦",
     image: "/farm_images/coel/coel2.webp",
@@ -120,7 +132,11 @@ export const db = {
   },
   francolin: {
     id: "francolin",
+    slug: "pheasant",
     name: "তিতির",
+    seoTitle: "তিতির (Pheasant) — ১০০% অর্গানিক তিতির পাখির মাংস বাংলাদেশ",
+    seoDescription: "Natural Birds BD এর ১০০% অর্গানিক তিতির পাখির মাংস — কম চর্বি, উচ্চ প্রোটিন ও প্রাকৃতিক স্বাদ। বাণিজ্যিক খাদ্যমুক্ত মুক্ত-বিচরণ পালন, খামার থেকে সরাসরি ডেলিভারি।",
+    keywords: ["তিতির বাংলাদেশ", "pheasant Bangladesh", "অর্গানিক তিতির", "organic pheasant meat Bangladesh", "তিতিরের দাম", "Natural Birds BD তিতির"],
     tagline: "কম চর্বি, স্বাস্থ্যকর এবং বন্য স্বাদের পুষ্টিগুণ সমৃদ্ধ",
     emoji: "🦚",
     image: "https://images.unsplash.com/photo-1701717546877-4a262ff7b9e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxndWluZWElMjBmb3dsJTIwYmlyZHxlbnwwfHx8fDE3ODMxOTY2OTl8MA&ixlib=rb-4.1.0&q=85",
@@ -156,3 +172,12 @@ export const db = {
     ]
   }
 };
+
+export type ProductId = keyof typeof db;
+export type Product = (typeof db)[ProductId];
+
+export const products = Object.values(db);
+
+export function getProductByOldId(id: string): Product | undefined {
+  return db[id as ProductId];
+}
