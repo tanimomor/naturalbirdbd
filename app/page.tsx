@@ -71,6 +71,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <span className="hero-divider-badge">EST. 2026</span>
+      </div>
+      <div className="hero-divider-caption" aria-hidden="true">
+        <p><strong>প্রতিষ্ঠাতা: এডঃ মোঃ আল মামুন</strong></p>
       </div>
 
       <section className="products-section" aria-labelledby="products-heading">

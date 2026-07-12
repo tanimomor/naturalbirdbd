@@ -3,6 +3,7 @@ import { Noto_Sans_Bengali, Noto_Serif_Bengali } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { OrderNavLink } from "./components/OrderNavLink";
+import { OrderFabButton } from "./components/OrderFabButton";
 import { SITE_URL, SITE_NAME } from "./lib/schema";
 import "./globals.css";
 
@@ -109,6 +110,7 @@ export default function RootLayout({
           {children}
         </main>
 
+        <OrderFabButton />
         <a id="wa-btn" href="https://wa.me/8801644292288" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp এ যোগাযোগ করুন" title="WhatsApp এ যোগাযোগ করুন">💬</a>
 
         <footer id="site-footer">

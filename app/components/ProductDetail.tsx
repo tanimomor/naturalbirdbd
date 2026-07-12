@@ -59,6 +59,7 @@ export function ProductDetail({ product }: { product: Product }) {
 
           <section className="content-section" aria-labelledby="nutrition-heading">
             <h2 id="nutrition-heading"><span className="sec-icon" aria-hidden="true">🥗</span> বৈশিষ্ট্য ও পুষ্টিগুণ</h2>
+            <p>পুষ্টির মধ্যে বিভিন্ন ভিটামিন যেমন বি১২, মিনারেল যেমন জিংক ইত্যাদি থাকে, প্রচুর শাকসব্জী ফিড হিসেবে খায় বলে চর্বি থাকে অনেক কম, বাণিজ্যিক খাবার খায় না বলে ক্ষতিকর ভারি ধাতু যেমন ক্যাডমিয়াম, ক্রোমিয়াম ইত্যাদি নেই তাই হাড়সহ পোল্ট্রির সকল অংশ অত্যন্ত স্বাস্থ্যকর নিরাপদ খাদ্য।</p>
             <div className="nutrition-grid">
               {product.nutrition.map((item, i) => (
                 <div key={i} className="nutrition-card">
@@ -122,6 +123,55 @@ export function ProductDetail({ product }: { product: Product }) {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </section>
+
+          <section className="content-section" aria-labelledby="difference-heading">
+            <h2 id="difference-heading"><span className="sec-icon" aria-hidden="true">📊</span> সাধারণ পোল্ট্রির সাথে পার্থক্য</h2>
+            <div style={{ overflowX: 'auto' }}>
+              <table className="comp-table">
+                <caption className="sr-only">সাধারণ পোল্ট্রি বনাম অর্গানিক পোল্ট্রির তুলনা</caption>
+                <thead>
+                  <tr><th scope="col">বৈশিষ্ট্য</th><th scope="col">সাধারণ পোল্ট্রি</th><th scope="col">অর্গানিক পোল্ট্রি</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><strong>খাদ্য</strong></th>
+                    <td><span className="bad">রাসায়নিক মিশ্রিত বাণিজ্যিক ফিড</span></td>
+                    <td><span className="good">কীটনাশক ও রাসায়নিক মুক্ত অর্গানিক ফিড</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><strong>ওষুধ</strong></th>
+                    <td><span className="bad">প্রয়োজন ও অপ্রয়োজনে অ্যান্টিবায়োটিক</span></td>
+                    <td><span className="good">প্রাকৃতিক বিকল্প ও কঠোর স্বাস্থ্যবিধি</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style={{ fontSize: '1.1rem', color: 'var(--green-dark)', margin: '1.8rem 0 0.8rem' }}>অর্গানিক পোল্ট্রির মূল বৈশিষ্ট্য</h3>
+            <div className="why-grid">
+              <div className="why-card">
+                <div className="wi" aria-hidden="true">🚫</div>
+                <div>
+                  <h3>অ্যান্টিবায়োটিক ও হরমোন মুক্ত</h3>
+                  <p>মুরগি বাড়াতে কোনো কৃত্রিম গ্রোথ হরমোন বা অ্যান্টিবায়োটিক ব্যবহার করা হয় না।</p>
+                </div>
+              </div>
+              <div className="why-card">
+                <div className="wi" aria-hidden="true">🌾</div>
+                <div>
+                  <h3>প্রাকৃতিক খাদ্য</h3>
+                  <p>কৃত্রিম কীটনাশক বা রাসায়নিক সার ছাড়া উৎপাদিত শস্য ও প্রাকৃতিকভাবে তৈরি খাবার দেওয়া হয়।</p>
+                </div>
+              </div>
+              <div className="why-card">
+                <div className="wi" aria-hidden="true">🐓</div>
+                <div>
+                  <h3>মুক্ত পরিবেশ</h3>
+                  <p>খাঁচায় বন্দি না রেখে প্রাকৃতিকভাবে চলাফেরা করার সুযোগ নিশ্চিত করা হয়।</p>
+                </div>
+              </div>
             </div>
           </section>
 
