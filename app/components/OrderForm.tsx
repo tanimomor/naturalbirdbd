@@ -85,7 +85,7 @@ export function OrderForm({ defaultProduct }: { defaultProduct?: string }) {
 
   return (
     <div className="order-section">
-      <h2>অর্ডার অনুরোধ করুন</h2>
+      <h2>অর্ডার করুন</h2>
       <p>নিচের ফর্মটি পূরণ করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
 
       {!formSuccess ? (
